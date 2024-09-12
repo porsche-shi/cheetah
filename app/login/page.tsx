@@ -10,9 +10,9 @@ export default function Login() {
             el: "#ww_login",
             params: {
                 login_type: WWLoginType.corpApp,
-                appid: "wwdf51420bb8d44d91",
-                agentid: "1000003",
-                redirect_uri: "https://shibaoxu.xyz",
+                appid: "ww33a76344ce7a60da",
+                agentid: "1000002",
+                redirect_uri: "https://cheetah-r7zxivxh5-porscheshis-projects.vercel.app/",
                 state: "loginState",
                 redirect_type: WWLoginRedirectType.callback,
                 panel_size: WWLoginPanelSizeType.small,
