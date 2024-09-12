@@ -1,11 +1,7 @@
-import {strict} from "node:assert";
-'use client'
-
-import Link from "next/link";
+"use client"
 // import {ArrowRightIcon} from "@nextui-org/shared-icons";
-import {ArrowRightIcon} from '@heroicons/react/24/outline';
-import {Card, CardBody, CardHeader} from "@nextui-org/card";
 import * as ww from "@wecom/jssdk"
+import {WWLoginLangType, WWLoginPanelSizeType, WWLoginRedirectType, WWLoginType} from "@wecom/jssdk"
 import {useEffect} from "react";
 
 export default function Login() {
@@ -13,14 +9,14 @@ export default function Login() {
         const wwLogin = ww.createWWLoginPanel({
             el: "#ww_login",
             params: {
-                login_type: "corpApp",
+                login_type: WWLoginType.corpApp,
                 appid: "wwdf51420bb8d44d91",
                 agentid: "1000003",
-                redirect_url: "http://shibaoxu.xyz",
+                redirect_uri: "https://shibaoxu.xyz",
                 state: "loginState",
-                redirect_type: "callback",
-                panel_size: "small",
-                lang: "zh"
+                redirect_type: WWLoginRedirectType.callback,
+                panel_size: WWLoginPanelSizeType.small,
+                lang: WWLoginLangType.zh
             },
             // onCheckWeComLogin({isWeComLogin}) {
             //     console.log(isWeComLogin)
@@ -34,13 +30,8 @@ export default function Login() {
         });
     })
     return (
-        <div id='ww_login' className="flex items-center justify-center min-h-screen">
-            {/*<Card className="md:min-w-[600px]">*/}
-            {/*    <CardHeader>Cheetah</CardHeader>*/}
-            {/*    <CardBody>*/}
-            {/*        <p>请使用企业微信APP扫描以下二维码进行登录</p>*/}
-            {/*    </CardBody>*/}
-            {/*</Card>*/}
+        <div className="flex items-center justify-center min-h-screen">
+            <div id="ww_login"></div>
         </div>
     )
     // return wwLogin
