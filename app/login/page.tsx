@@ -14,8 +14,8 @@ export default function Login() {
                 agentid: "1000003",
                 redirect_uri: "https://cheetah.tntlinking.com/",
                 state: "loginState",
-                redirect_type: WWLoginRedirectType.callback,
-                panel_size: WWLoginPanelSizeType.small,
+                redirect_type: WWLoginRedirectType.top,
+                panel_size: WWLoginPanelSizeType.middle,
                 lang: WWLoginLangType.zh
             },
             // onCheckWeComLogin({isWeComLogin}) {
