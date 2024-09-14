@@ -7,8 +7,9 @@ export default async function WWLogin() {
     // }, []);
 
     const resp = await fetch(url)
+    const text = await resp.text()
 
     return (
-        <div dangerouslySetInnerHTML={{__html: resp.text()}}></div>
+        <div dangerouslySetInnerHTML={{__html: text}}></div>
     )
 };
