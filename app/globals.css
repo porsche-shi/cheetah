@@ -31,3 +31,6 @@
 /*    text-wrap: balance;*/
 /*  }*/
 /*}*/
+.wwLogin_qrcode_head {
+    display: none;
+}
