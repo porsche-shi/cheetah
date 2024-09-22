@@ -4,7 +4,7 @@ import {redirect} from "next/navigation";
 export default async function AutoLogin() {
     const appid=`wwdf51420bb8d44d91`
     const agent_id = '1000003'
-    const redirect_uri = encodeURIComponent('https://cheetah.tntlinking.com')
+    const redirect_uri = encodeURIComponent('https://cheetah.tntlinking.com/autologin/verify')
     const response_type = 'code'
     const scope = 'snsapi_base'
     // const scope = 'snsapi_privateinfo'
