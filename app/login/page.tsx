@@ -18,9 +18,10 @@ export default function Login() {
                 panel_size: WWLoginPanelSizeType.middle,
                 lang: WWLoginLangType.zh
             },
-            // onCheckWeComLogin({isWeComLogin}) {
-            //     console.log(isWeComLogin)
-            // },
+            onCheckWeComLogin({isWeComLogin}) {
+                console.log('判断是否Login')
+                console.log(isWeComLogin)
+            },
             onLoginSuccess({code}) {
                 console.log(code)
             },
