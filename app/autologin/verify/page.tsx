@@ -24,5 +24,7 @@ export default async function Page({
                              }: {
     searchParams: { [key: string]: string | string[] | undefined }
 }) {
-    return <h1>{searchParams['code']}</h1>
+    const code =searchParams['code']
+    console.log(code)
+    return <h1>code = {code}</h1>
 }
