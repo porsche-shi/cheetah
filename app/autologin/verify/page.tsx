@@ -19,8 +19,10 @@
 //     )
 // };
 
-export default async function Page(searchParams: FormData) {
-    return (
-        <div>查询参数是: {searchParams}</div>
-    )
-};
+export default async function Page({
+                                 searchParams,
+                             }: {
+    searchParams: { [key: string]: string | string[] | undefined }
+}) {
+    return <h1>{searchParams['code']}</h1>
+}
