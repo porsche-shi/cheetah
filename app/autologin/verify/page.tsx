@@ -1,25 +1,26 @@
-'use client'
+// 'use client'
+'use server'
+// import {useSearchParams} from "next/navigation";
+// import {Suspense} from "react";
 
-import {useSearchParams} from "next/navigation";
-import {Suspense} from "react";
+// function Code() {
+//     const params = useSearchParams()
+//     const code = params.get('code')
+//     const state = params.get('state')
+//     return <div>code = {code}, state = {state}</div>
+//
+// }
 
-function Code() {
-    const params = useSearchParams()
-    const code = params.get('code')
-    const state = params.get('state')
-    return <div>code = {code}, state = {state}</div>
-
-}
-export default function Page() {
-    return (
-        <Suspense>
-            <Code />
-        </Suspense>
-    )
-};
-
-// export default async function Page({searchParams}: { searchParams: any }) {
+// export default function Page() {
 //     return (
-//         <div>查询参数是: {searchParams}</div>
+//         <Suspense>
+//             <Code />
+//         </Suspense>
 //     )
 // };
+
+export default async function Page(searchParams: FormData) {
+    return (
+        <div>查询参数是: {searchParams}</div>
+    )
+};
